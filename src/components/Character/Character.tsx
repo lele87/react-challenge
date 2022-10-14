@@ -1,6 +1,7 @@
+import { ICharacter } from '../../types/types';
 import StyledCharacter from './StyledCharacter';
 
-const Character = () => {
+const Character = ({ character: { name, image } }: { character: ICharacter }) => {
 	return (
 		<>
 			<StyledCharacter>
@@ -10,12 +11,11 @@ const Character = () => {
 							width={300}
 							height={300}
 							className="character__image"
-							src="test.png"
-							alt={'Name from Rick and Morty Show'}
+							src={image}
+							alt={`${name} from Rick and Morty Show`}
 						></img>
 					</div>
-					<h2>Test</h2>
-					<span>185cm</span>
+					<h2>{name}</h2>
 				</div>
 			</StyledCharacter>
 		</>

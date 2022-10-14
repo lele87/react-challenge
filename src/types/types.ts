@@ -5,3 +5,7 @@ export interface ICharacter {
 	image: string;
 	species: string;
 }
+
+export interface ICharacterState {
+	characterInfo: ICharacter[];
+}
