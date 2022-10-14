@@ -1,5 +1,7 @@
+import Character from './components/Character/Character';
+
 function App() {
-	return <h1>React Challenge</h1>;
+	return <Character />;
 }
 
 export default App;
