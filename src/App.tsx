@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
-import CharactersList from './components/CharactersList/CharactersList';
-import { useAppDispatch } from './redux/store/hooks';
-import { loadCharactersThunk } from './redux/thunks/characterThunks';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage/Homepage';
 
 function App() {
-	const dispatch = useAppDispatch();
-
-	useEffect(() => {
-		dispatch(loadCharactersThunk());
-	}, [dispatch]);
-	return <CharactersList />;
+	return (
+		<>
+			<Routes>
+				<Route path="/" element={<Navigate to="/home" />} />
+				<Route path="/home" element={<HomePage />} />
+			</Routes>
+		</>
+	);
 }
 
 export default App;

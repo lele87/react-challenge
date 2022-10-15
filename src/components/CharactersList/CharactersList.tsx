@@ -1,11 +1,8 @@
-import { useAppSelector } from '../../redux/store/hooks';
 import { ICharacter } from '../../types/types';
 import Character from '../Character/Character';
 import StyledCharactersList from './StyledCharactersList';
 
-const CharactersList = () => {
-	const charactersList = useAppSelector(state => state.characters.characterInfo);
-
+const CharactersList = ({ charactersList }: any) => {
 	return (
 		<StyledCharactersList>
 			<div className="character-container">

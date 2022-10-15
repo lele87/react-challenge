@@ -6,7 +6,7 @@ const Character = ({ character: { name, image } }: { character: ICharacter }) =>
 		<>
 			<StyledCharacter>
 				<div className="character">
-					<div className="character__image-container">
+					<div className="character__image--container">
 						<img
 							width={300}
 							height={300}
