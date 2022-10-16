@@ -20,7 +20,7 @@ const StyledCharacter = styled.div`
 		}
 		span {
 			color: #fff;
-			font-size: 1.2rem;
+			font-size: 19px;
 			padding-bottom: 20px;
 		}
 		&__image--container {

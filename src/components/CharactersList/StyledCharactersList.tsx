@@ -2,12 +2,6 @@ import styled from 'styled-components';
 
 const StyledCharactersList = styled.div`
 	.character-container {
-		/* width: 100%;
-		min-width: 350px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center; */
 		background-color: #cbf7ed;
 		padding-top: 100px;
 	}

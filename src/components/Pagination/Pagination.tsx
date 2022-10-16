@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { setNextPageActionCreator, setPreviousPageActionCreator } from '../../redux/features/paginationSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
+import StyledPagination from './StyledPagination';
 
 const Pagination = () => {
 	const dispatch = useAppDispatch();
@@ -13,37 +13,6 @@ const Pagination = () => {
 	const goToNextPage = () => {
 		dispatch(setNextPageActionCreator());
 	};
-
-	const StyledPagination = styled.div`
-		.pagination {
-			background-color: #b2df28;
-			height: 80px;
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-
-			&__button {
-				background-color: #000;
-				border-radius: 10px;
-				color: #b2df28;
-				font-size: 24px;
-				width: 120px;
-				height: 40px;
-				cursor: pointer;
-
-				:disabled {
-					pointer-events: none;
-					background-color: #b2df28;
-					border: none;
-				}
-			}
-
-			span {
-				font-size: 24px;
-			}
-		}
-	`;
 
 	return (
 		<StyledPagination className="pagination--container">

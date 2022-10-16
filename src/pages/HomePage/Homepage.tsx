@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import CharactersList from '../../components/CharactersList/CharactersList';
+import Header from '../../components/Header/Header';
 import Pagination from '../../components/Pagination/Pagination';
 import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
 import { loadCharactersThunk } from '../../redux/thunks/characterThunks';
@@ -16,6 +17,7 @@ const HomePage = () => {
 
 	return (
 		<>
+			<Header />
 			<CharactersList charactersList={charactersList} />
 			<Pagination />
 		</>
