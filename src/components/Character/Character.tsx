@@ -19,6 +19,9 @@ const Character = ({ character: { name, image, species, status } }: { character:
 					<span>
 						{species} | {status}
 					</span>
+					<div className="character__details">
+						<button className="character__details--button">Details</button>
+					</div>
 				</div>
 			</StyledCharacter>
 		</>

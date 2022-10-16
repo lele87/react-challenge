@@ -7,7 +7,7 @@ const StyledCharacter = styled.div`
 		align-items: center;
 		background-color: #1e221b;
 		border-radius: 20px;
-		height: 410px;
+		height: 470px;
 		margin: 0 3px 120px 3px;
 		padding: 8px;
 
@@ -32,6 +32,18 @@ const StyledCharacter = styled.div`
 		&__image {
 			border-radius: 50%;
 			object-fit: cover;
+		}
+
+		&__details--button {
+			background-color: #000;
+			border-radius: 10px;
+			color: #b2df28;
+			font-size: 24px;
+			width: 120px;
+			height: 40px;
+			margin-top: 10px;
+			cursor: pointer;
+			border: 1px solid #b2df28;
 		}
 	}
 `;
