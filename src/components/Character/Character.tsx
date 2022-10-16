@@ -1,7 +1,7 @@
 import { ICharacter } from '../../types/types';
 import StyledCharacter from './StyledCharacter';
 
-const Character = ({ character: { name, image } }: { character: ICharacter }) => {
+const Character = ({ character: { name, image, species, status } }: { character: ICharacter }) => {
 	return (
 		<>
 			<StyledCharacter>
@@ -16,6 +16,9 @@ const Character = ({ character: { name, image } }: { character: ICharacter }) =>
 						></img>
 					</div>
 					<h2>{name}</h2>
+					<span>
+						{species} | {status}
+					</span>
 				</div>
 			</StyledCharacter>
 		</>

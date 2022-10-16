@@ -9,3 +9,8 @@ export interface ICharacter {
 export interface ICharacterState {
 	characterInfo: ICharacter[];
 }
+
+export interface IPagination {
+	totalPages: number;
+	currentPage: number;
+}
