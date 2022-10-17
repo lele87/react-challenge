@@ -1,8 +1,8 @@
-import { ICharacter } from '../../types/types';
+import { ICharacter, ICharactersListProps } from '../../types/types';
 import Character from '../Character/Character';
 import StyledCharactersList from './StyledCharactersList';
 
-const CharactersList = ({ charactersList }: any) => {
+const CharactersList = ({ charactersList }: ICharactersListProps) => {
 	return (
 		<StyledCharactersList>
 			<div className="character-container">

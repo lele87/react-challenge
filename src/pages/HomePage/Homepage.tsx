@@ -7,8 +7,8 @@ import { loadCharactersThunk } from '../../redux/thunks/characterThunks';
 
 const HomePage = () => {
 	const dispatch = useAppDispatch();
-	const charactersList = useAppSelector(state => state.characters.characterInfo);
 	const { currentPage } = useAppSelector(state => state.pagination);
+	const { characterInfo } = useAppSelector(state => state.characters);
 
 	useEffect(() => {
 		dispatch(loadCharactersThunk(currentPage));
@@ -18,7 +18,7 @@ const HomePage = () => {
 	return (
 		<>
 			<Header />
-			<CharactersList charactersList={charactersList} />
+			<CharactersList charactersList={characterInfo} />
 			<Pagination />
 		</>
 	);

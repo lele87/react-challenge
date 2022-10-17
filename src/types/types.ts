@@ -10,6 +10,10 @@ export interface ICharacterState {
 	characterInfo: ICharacter[];
 }
 
+export interface ICharactersListProps {
+	charactersList: ICharacter[];
+}
+
 export interface IPagination {
 	totalPages: number;
 	currentPage: number;
