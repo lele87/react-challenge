@@ -1,21 +1,23 @@
 import styled from 'styled-components';
 
 const StyledSortCharacters = styled.div`
-	.dropbtn {
-		background-color: #1e221b;
-		color: #b2df28;
-		border: none;
-		font-weight: bolder;
-		border-radius: 5px;
-		padding: 12px;
-		font-size: 16px;
-		cursor: pointer;
-	}
 	.dropdown {
 		position: relative;
 		display: inline-block;
+
+		&__button {
+			background-color: #1e221b;
+			color: #b2df28;
+			border: none;
+			font-weight: bolder;
+			border-radius: 5px;
+			padding: 12px;
+			font-size: 16px;
+			cursor: pointer;
+		}
 	}
-	.dropdown-content {
+
+	.dropdown--content {
 		display: none;
 		position: absolute;
 		background-color: #ffff;
@@ -23,7 +25,7 @@ const StyledSortCharacters = styled.div`
 		z-index: 1;
 		width: 100%;
 	}
-	.dropdown-content button {
+	.dropdown--content button {
 		color: #000;
 		padding: 12px 16px;
 		display: block;
@@ -32,10 +34,10 @@ const StyledSortCharacters = styled.div`
 		cursor: pointer;
 		font-family: 'Roboto';
 	}
-	.dropdown-content button:hover {
+	.dropdown--content button:hover {
 		background-color: #ddd;
 	}
-	.dropdown:hover .dropdown-content {
+	.dropdown:hover .dropdown--content {
 		display: block;
 	}
 	.dropdown:hover .dropbtn {

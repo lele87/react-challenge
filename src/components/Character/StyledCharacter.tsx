@@ -7,7 +7,7 @@ const StyledCharacter = styled.div`
 		align-items: center;
 		background-color: #1e221b;
 		border-radius: 20px;
-		height: 470px;
+		height: 505px;
 		margin: 0 3px 120px 3px;
 		padding: 8px;
 

@@ -8,10 +8,13 @@ export interface ICharacter {
 
 export interface ICharacterState {
 	characterInfo: ICharacter[];
+	filterStatus: string;
+	filterName: string;
 }
 
 export interface ICharactersListProps {
 	charactersList: ICharacter[];
+	query: string;
 }
 
 export interface IPagination {

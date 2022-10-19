@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledPagination = styled.div`
 	.pagination {
-		background-color: #b2df28;
+		background-color: var(--color);
 		height: 80px;
 		width: 100%;
 		display: flex;
@@ -20,7 +20,7 @@ const StyledPagination = styled.div`
 
 			:disabled {
 				pointer-events: none;
-				background-color: #b2df28;
+				background-color: var(--color);
 				border: none;
 			}
 		}
