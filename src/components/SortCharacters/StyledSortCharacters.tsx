@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 const StyledSortCharacters = styled.div`
+	display: flex;
+	justify-content: center;
+	margin: 30px 0 0 0;
+
 	.dropdown {
 		position: relative;
 		display: inline-block;
 
 		&__button {
-			background-color: #1e221b;
-			color: #b2df28;
+			background-color: var(--card-background-color);
+			color: var(--color);
 			border: none;
 			font-weight: bolder;
 			border-radius: 5px;
@@ -19,29 +23,33 @@ const StyledSortCharacters = styled.div`
 
 	.dropdown--content {
 		display: none;
-		position: absolute;
-		background-color: #ffff;
-		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-		z-index: 1;
 		width: 100%;
+		box-shadow: var(--box-shadow);
+		z-index: 1;
 	}
+
 	.dropdown--content button {
-		color: #000;
+		box-shadow: var(--box-shadow);
 		padding: 12px 16px;
 		display: block;
 		width: 100%;
 		text-align: center;
 		cursor: pointer;
-		font-family: 'Roboto';
+		background-color: #fff;
+		border: 0.3px solid darkgrey;
 	}
-	.dropdown--content button:hover {
-		background-color: #ddd;
+
+	.dropdown--content:hover button:hover {
+		background-color: var(--color);
+		color: #ffff;
 	}
+
 	.dropdown:hover .dropdown--content {
 		display: block;
 	}
-	.dropdown:hover .dropbtn {
-		background-color: #f99459;
+
+	.dropdown:hover .dropdown__button {
+		background-color: var(--color);
 		color: #ffff;
 	}
 `;

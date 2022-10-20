@@ -5,7 +5,7 @@ const StyledCharacter = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background-color: #1e221b;
+		background-color: var(--card-background-color);
 		border-radius: 20px;
 		height: 505px;
 		margin: 0 3px 120px 3px;
@@ -13,10 +13,10 @@ const StyledCharacter = styled.div`
 
 		h2 {
 			text-transform: uppercase;
-			font-size: 1.8rem;
+			font-size: 29px;
 			padding-top: 20px;
 			text-align: center;
-			color: #b2df28;
+			color: var(--color);
 		}
 		span {
 			color: #fff;
@@ -37,7 +37,7 @@ const StyledCharacter = styled.div`
 		&__details--button {
 			background-color: #000;
 			border-radius: 10px;
-			color: #b2df28;
+			color: var(--color);
 			font-size: 24px;
 			width: 120px;
 			height: 40px;

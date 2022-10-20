@@ -12,7 +12,8 @@ const StyledPagination = styled.div`
 		&__button {
 			background-color: #000;
 			border-radius: 10px;
-			color: #b2df28;
+			border: none;
+			color: var(--color);
 			font-size: 24px;
 			width: 120px;
 			height: 40px;

@@ -6,6 +6,7 @@ import Pagination from '../../components/Pagination/Pagination';
 import SortCharacters from '../../components/SortCharacters/SortCharacters';
 import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
 import { loadCharactersThunk } from '../../redux/thunks/characterThunks';
+import StyledHomePage from './StyledHomePage';
 
 const HomePage = () => {
 	const dispatch = useAppDispatch();
@@ -21,11 +22,13 @@ const HomePage = () => {
 
 	return (
 		<>
-			<Header />
-			<Filter />
-			<SortCharacters />
-			<CharactersList charactersList={characterInfo} query={query} />
-			<Pagination />
+			<StyledHomePage>
+				<Header />
+				<Filter />
+				<SortCharacters charactersList={characterInfo} />
+				<CharactersList charactersList={characterInfo} query={query} />
+				<Pagination />
+			</StyledHomePage>
 		</>
 	);
 };

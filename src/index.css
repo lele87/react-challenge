@@ -15,4 +15,5 @@ body {
 	--background-color: #cbf7ed;
 	--card-background-color: #1e221b;
 	--color: #b2df28;
+	--box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }

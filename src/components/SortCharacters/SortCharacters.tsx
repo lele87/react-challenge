@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
 	sortCharactersByNameAscendingActionCreator,
 	sortCharactersByNameDescendingActionCreator
@@ -15,20 +14,14 @@ const SortCharacters = ({ charactersList }: any) => {
 			: dispatch(sortCharactersByNameDescendingActionCreator(charactersList));
 	};
 
-	useEffect(() => {
-		window.localStorage.setItem('savedData', charactersList as any);
-	}, [charactersList]);
-
 	return (
 		<>
-			<StyledSortCharacters>
-				<div className="dropdown__container">
-					<div className="dropdown">
-						<button className="dropdown__button">Sort by Name</button>
-						<div className="dropdown--content" onClick={e => handleSortName(e)}>
-							<button value="ascending">A - Z</button>
-							<button value="descending">Z - A</button>
-						</div>
+			<StyledSortCharacters className="dropdown--container">
+				<div className="dropdown">
+					<button className="dropdown__button">Sort by Name</button>
+					<div className="dropdown--content" onClick={e => handleSortName(e)}>
+						<button value="ascending">A - Z</button>
+						<button value="descending">Z - A</button>
 					</div>
 				</div>
 			</StyledSortCharacters>

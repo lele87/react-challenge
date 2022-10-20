@@ -46,7 +46,7 @@ const Filter = () => {
 							id="search by status"
 						>
 							<option disabled value="">
-								Filter by status
+								Filter by Status
 							</option>
 							<option value="Alive">Alive</option>
 							<option value="Dead">Dead</option>
@@ -60,7 +60,7 @@ const Filter = () => {
 							id="filter"
 						>
 							<option disabled value="">
-								Filter by name
+								Filter by Name
 							</option>
 							<option value="Rick">Rick</option>
 							<option value="Morty">Morty</option>

@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 const StyledCharactersList = styled.div`
 	.character-container {
-		background-color: #cbf7ed;
 		padding-top: 100px;
 	}
 
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 32px;
 		padding: 0px;
 
 		@media (min-width: 601px) {
