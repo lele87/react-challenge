@@ -5,7 +5,7 @@ import { AppDispatch } from '../store';
 
 export const loadCharactersThunk =
 	(pageNumber: number, name: string, status: string) => async (dispatch: AppDispatch) => {
-		const url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${name}&status=${status}`;
+		const url: string = `${process.env.REACT_APP_API_URL}?page=${pageNumber}&name=${name}&status=${status}`;
 
 		try {
 			const {
