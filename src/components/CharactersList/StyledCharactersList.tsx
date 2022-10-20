@@ -2,22 +2,45 @@ import styled from 'styled-components';
 
 const StyledCharactersList = styled.div`
 	.character-container {
-		width: 100%;
-		min-width: 350px;
-		background-color: #cbf7ed;
+		padding-top: 100px;
+	}
+
+	ul {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		padding-top: 100px;
-		text-align: center;
+		gap: 32px;
+		padding: 0px;
 
-		ul {
-			list-style: none;
-			padding: 0;
+		@media (min-width: 601px) {
+			flex-direction: row;
+			margin: 0;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
 		}
-		li {
-			list-style: none;
+
+		@media (max-width: 898px) {
+			flex-direction: row;
+			margin: 0;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
 		}
+
+		@media (min-width: 899px) {
+			flex-direction: row;
+			margin: 0;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-top: 20px;
+		}
+	}
+
+	li {
+		list-style: none;
+		flex: 0 0 33%;
 	}
 `;
 
