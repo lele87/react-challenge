@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const StyledPagination = styled.div`
+	display: block;
+	padding-top: 20px;
+
 	.pagination {
-		background-color: var(--color);
-		height: 80px;
-		width: 100%;
 		display: flex;
-		align-items: center;
 		justify-content: space-around;
+		align-items: center;
 
 		&__button {
 			background-color: #000;
@@ -25,10 +25,10 @@ const StyledPagination = styled.div`
 				border: none;
 			}
 		}
+	}
 
-		span {
-			font-size: 24px;
-		}
+	span {
+		font-size: 24px;
 	}
 `;
 

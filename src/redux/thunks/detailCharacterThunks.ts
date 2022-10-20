@@ -7,7 +7,7 @@ export const loadSingleCharacterThunk = (id: string) => async (dispatch: AppDisp
 
 	try {
 		const { data } = await axios.get(url);
-		console.log(data);
+
 		if (data) {
 			dispatch(loadSingleCharacterActionCreator(data));
 		}

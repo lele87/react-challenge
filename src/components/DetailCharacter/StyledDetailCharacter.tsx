@@ -1,49 +1,67 @@
 import styled from 'styled-components';
 
 const StyledDetailCharacter = styled.div`
+	width: 100%;
+	margin: 140px auto;
+
+	.character__property--container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.character {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		background-color: var(--card-background-color);
 		border-radius: 20px;
-		height: 505px;
-		margin: 0 3px 120px 3px;
-		padding: 8px;
+		width: 90%;
+		max-width: 600px;
+		height: 100%;
+		margin: 0 auto;
+		padding: 20px 5px;
 
-		h2 {
+		&__name {
 			text-transform: uppercase;
-			font-size: 29px;
+			font-size: 40px;
 			padding-top: 20px;
 			text-align: center;
 			color: var(--color);
 		}
-		span {
+
+		.character__property {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			flex: 0 50%;
+			gap: 12px;
 			color: #fff;
-			font-size: 19px;
+		}
+
+		span {
+			color: var(--color);
+			font-size: 21px;
 			padding-bottom: 20px;
 		}
 		&__image--container {
-			width: 300px;
-			height: 300px;
 			margin-top: -70px;
+
+			@media (min-width: 339px) {
+				width: 300px;
+				height: 300px;
+			}
 		}
 
 		&__image {
 			border-radius: 50%;
 			object-fit: cover;
-		}
 
-		&__details--button {
-			background-color: #000;
-			border-radius: 10px;
-			color: var(--color);
-			font-size: 24px;
-			width: 120px;
-			height: 40px;
-			margin-top: 10px;
-			cursor: pointer;
-			border: 1px solid #b2df28;
+			@media (max-width: 338px) {
+				width: 230px;
+				height: 230px;
+			}
 		}
 	}
 `;
