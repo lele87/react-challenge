@@ -4,6 +4,10 @@ export interface ICharacter {
 	status: string;
 	image: string;
 	species: string;
+	gender: string;
+	origin: {
+		name: string;
+	};
 }
 
 export interface ICharacterState {
