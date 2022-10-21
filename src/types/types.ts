@@ -20,6 +20,10 @@ export interface ICharactersListProps {
 	query: string;
 }
 
+export interface IDetailCharacterProps {
+	character: ICharacter;
+}
+
 export interface IPagination {
 	totalPages: number;
 	currentPage: number;

@@ -16,17 +16,19 @@ const HomePage = () => {
 	const [query, setQuery] = useState('');
 
 	useEffect(() => {
-		dispatch(loadCharactersThunk(currentPage, filterName, filterStatus));
 		window.scrollTo(0, 0);
+		dispatch(loadCharactersThunk(currentPage, filterName, filterStatus));
 	}, [dispatch, currentPage, query, filterName, filterStatus]);
 
 	return (
 		<>
 			<StyledHomePage>
-				<Header />
-				<Filter />
-				<SortCharacters charactersList={characterInfo} />
-				<CharactersList charactersList={characterInfo} query={query} />
+				<div className="content">
+					<Header />
+					<Filter />
+					<SortCharacters charactersList={characterInfo} />
+					<CharactersList charactersList={characterInfo} query={query} />
+				</div>
 				<Footer />
 			</StyledHomePage>
 		</>

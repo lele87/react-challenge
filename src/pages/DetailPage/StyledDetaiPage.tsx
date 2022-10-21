@@ -16,6 +16,10 @@ const StyledDetailPage = styled.div`
 		font-size: 25px;
 		cursor: pointer;
 	}
+
+	.content {
+		min-height: calc(100vh - 80px);
+	}
 `;
 
 export default StyledDetailPage;
