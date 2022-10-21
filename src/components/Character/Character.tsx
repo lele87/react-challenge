@@ -1,7 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { ICharacter } from '../../types/types';
+import Button from '../Button/Button';
 import StyledCharacter from './StyledCharacter';
 
-const Character = ({ character: { name, image, species, status } }: { character: ICharacter }) => {
+const Character = ({ character: { id, name, image, species, status } }: { character: ICharacter }) => {
+	const navigate = useNavigate();
+
+	const navigateToDetails = (id: string): void => {
+		navigate(`/details/${id}`);
+	};
+
 	return (
 		<>
 			<StyledCharacter>
@@ -20,7 +28,11 @@ const Character = ({ character: { name, image, species, status } }: { character:
 						{species} | {status}
 					</span>
 					<div className="character__details">
-						<button className="character__details--button">Details</button>
+						<Button
+							className={'character__details--button'}
+							onClick={() => navigateToDetails(id)}
+							text={'Details'}
+						/>
 					</div>
 				</div>
 			</StyledCharacter>

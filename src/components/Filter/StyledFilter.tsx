@@ -62,6 +62,7 @@ const StyledFilter = styled.div`
 			height: 100%;
 			font-size: 15px;
 			padding: 2px 2px;
+			margin-top: 0px;
 			background-color: var(--color);
 			color: #000;
 			border-radius: 5px;

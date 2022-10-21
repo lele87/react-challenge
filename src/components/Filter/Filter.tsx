@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { setFilterNameActionCreator, setFilterStatusActionCreator } from '../../redux/features/characterSlice';
 import { resetCurrentPageActionCreator } from '../../redux/features/paginationSlice';
 import { useAppDispatch } from '../../redux/store/hooks';
+import Button from '../Button/Button';
 import StyledFilter from './StyledFilter';
 
 const Filter = () => {
@@ -68,8 +69,8 @@ const Filter = () => {
 						</select>
 					</div>
 					<div className="filter__buttons">
-						<button onClick={applyFilter}>Filter</button>
-						<button onClick={clearFilters}>Clear Filters</button>
+						<Button text={'Filter'} className={'apply__filter--button'} onClick={applyFilter} />
+						<Button text={'Clear Filters'} className={'clear__filter--button'} onClick={clearFilters} />
 					</div>
 				</div>
 			</StyledFilter>

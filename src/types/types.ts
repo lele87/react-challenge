@@ -4,8 +4,11 @@ export interface ICharacter {
 	status: string;
 	image: string;
 	species: string;
+	gender: string;
+	origin: {
+		name: string;
+	};
 }
-
 export interface ICharacterState {
 	characterInfo: ICharacter[];
 	filterStatus: string;
@@ -20,4 +23,10 @@ export interface ICharactersListProps {
 export interface IPagination {
 	totalPages: number;
 	currentPage: number;
+}
+
+export interface IButtonProps {
+	onClick?: React.MouseEventHandler;
+	text: string;
+	className: string;
 }

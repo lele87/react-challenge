@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import CharactersList from '../../components/CharactersList/CharactersList';
 import Filter from '../../components/Filter/Filter';
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import Pagination from '../../components/Pagination/Pagination';
 import SortCharacters from '../../components/SortCharacters/SortCharacters';
 import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
 import { loadCharactersThunk } from '../../redux/thunks/characterThunks';
@@ -27,7 +27,7 @@ const HomePage = () => {
 				<Filter />
 				<SortCharacters charactersList={characterInfo} />
 				<CharactersList charactersList={characterInfo} query={query} />
-				<Pagination />
+				<Footer />
 			</StyledHomePage>
 		</>
 	);

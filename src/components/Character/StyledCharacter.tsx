@@ -36,13 +36,7 @@ const StyledCharacter = styled.div`
 
 		&__details--button {
 			background-color: #000;
-			border-radius: 10px;
 			color: var(--color);
-			font-size: 24px;
-			width: 120px;
-			height: 40px;
-			margin-top: 10px;
-			cursor: pointer;
 			border: 1px solid #b2df28;
 		}
 	}
