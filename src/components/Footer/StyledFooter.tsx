@@ -13,4 +13,10 @@ export const StyledDetailFooter = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	.footer__text {
+		@media (max-width: 269px) {
+			text-align: center;
+		}
+	}
 `;

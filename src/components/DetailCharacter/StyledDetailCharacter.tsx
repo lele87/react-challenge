@@ -2,12 +2,7 @@ import styled from 'styled-components';
 
 const StyledDetailCharacter = styled.div`
 	width: 100%;
-	margin: 140px auto;
-
-	.character__property--container {
-		display: flex;
-		flex-wrap: wrap;
-	}
+	margin: 150px auto 40px auto;
 
 	.character {
 		display: flex;
@@ -29,7 +24,7 @@ const StyledDetailCharacter = styled.div`
 			color: var(--color);
 		}
 
-		.character__property {
+		&__property {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -40,11 +35,11 @@ const StyledDetailCharacter = styled.div`
 			color: #fff;
 		}
 
-		span {
-			color: var(--color);
-			font-size: 21px;
-			padding-bottom: 20px;
+		&__property--container {
+			display: flex;
+			flex-wrap: wrap;
 		}
+
 		&__image--container {
 			margin-top: -70px;
 
@@ -62,6 +57,12 @@ const StyledDetailCharacter = styled.div`
 				width: 230px;
 				height: 230px;
 			}
+		}
+
+		span {
+			color: var(--color);
+			font-size: 21px;
+			padding-bottom: 20px;
 		}
 	}
 `;

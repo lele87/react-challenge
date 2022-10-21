@@ -11,6 +11,14 @@ export const StyleHeader = styled.div`
 		.logo {
 			width: 350px;
 			padding: 50px 0;
+
+			@media (max-width: 364px) {
+				width: 300px;
+			}
+
+			@media (max-width: 306px) {
+				width: 250px;
+			}
 		}
 	}
 `;

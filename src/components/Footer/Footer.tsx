@@ -13,7 +13,7 @@ const Footer = () => {
 				<Pagination />
 			) : (
 				<StyledDetailFooter>
-					<p>Copyright &copy; {currentYear} All Rights Reserved</p>
+					<p className="footer__text">Copyright &copy; {currentYear} All Rights Reserved</p>
 				</StyledDetailFooter>
 			)}
 		</StyledFooter>
