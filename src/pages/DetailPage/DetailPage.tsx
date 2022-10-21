@@ -28,7 +28,7 @@ const DetailPage = () => {
 				<Header />
 				<DetailCharacter character={character} />
 				<div className="backhome__button--container">
-					<Button text={'Home'} action={navigateToHome} className={'backhome__button'} />
+					<Button text={'Home'} onClick={navigateToHome} className={'backhome__button'} />
 				</div>
 				<Footer />
 			</StyledDetailPage>

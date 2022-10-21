@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ICharacter } from '../../types/types';
+import Button from '../Button/Button';
 import StyledCharacter from './StyledCharacter';
 
 const Character = ({ character: { id, name, image, species, status } }: { character: ICharacter }) => {
@@ -27,9 +28,11 @@ const Character = ({ character: { id, name, image, species, status } }: { charac
 						{species} | {status}
 					</span>
 					<div className="character__details">
-						<button className="character__details--button" onClick={() => navigateToDetails(id)}>
-							Details
-						</button>
+						<Button
+							className={'character__details--button'}
+							onClick={() => navigateToDetails(id)}
+							text={'Details'}
+						/>
 					</div>
 				</div>
 			</StyledCharacter>

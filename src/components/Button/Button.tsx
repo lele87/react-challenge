@@ -1,14 +1,9 @@
+import { IButtonProps } from '../../types/types';
 import StyledButton from './StyledButton';
 
-interface IButtonProps {
-	action?: React.MouseEventHandler;
-	text: string;
-	className: string;
-}
-
-const Button = ({ action, text, className }: IButtonProps) => {
+const Button = ({ onClick, text, className }: IButtonProps) => {
 	return (
-		<StyledButton onClick={action} className={className}>
+		<StyledButton onClick={onClick} className={className}>
 			{text}
 		</StyledButton>
 	);
