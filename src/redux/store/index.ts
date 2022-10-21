@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import characterReducer from '../features/characterSlice';
 import detailCharacterReducer from '../features/detailCharacterSlice';
 import paginationReducer from '../features/paginationSlice';
+import uiReducer from '../features/uiSlice';
 
 const store = configureStore({
 	reducer: {
 		characters: characterReducer,
 		character: detailCharacterReducer,
-		pagination: paginationReducer
+		pagination: paginationReducer,
+		ui: uiReducer
 	}
 });
 
