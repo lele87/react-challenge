@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 const StyledCharactersList = styled.div`
-	.character-container {
+	.character--container {
 		padding-top: 100px;
+		text-align: center;
+
+		.character__results {
+			font-size: 22px;
+			margin-bottom: 70px;
+		}
 	}
 
 	ul {

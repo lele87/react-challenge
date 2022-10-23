@@ -7,6 +7,12 @@ const StyledHomePage = styled.div`
 	.content {
 		min-height: calc(100vh - 80px);
 	}
+
+	.characters__error--text {
+		text-align: center;
+		margin-top: 130px;
+		font-size: 28px;
+	}
 `;
 
 export default StyledHomePage;

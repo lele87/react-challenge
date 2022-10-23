@@ -1,3 +1,4 @@
+import { useAppSelector } from '../../redux/store/hooks';
 import { ICharacter, ICharactersListProps } from '../../types/types';
 import Character from '../Character/Character';
 import StyledCharactersList from './StyledCharactersList';
@@ -9,10 +10,12 @@ const CharactersList = ({ charactersList, query }: ICharactersListProps) => {
 			character.status.toLowerCase().includes(query.toLowerCase())
 	);
 
+	const { totalResults } = useAppSelector(state => state.pagination);
+
 	return (
 		<StyledCharactersList>
-			<div className="character-container">
-				<p>{charactersList.length} results</p>
+			<div className="character--container">
+				<p className="character__results">{totalResults} results</p>
 				<ul>
 					{filteredCharacters.map((character: ICharacter) => {
 						return (

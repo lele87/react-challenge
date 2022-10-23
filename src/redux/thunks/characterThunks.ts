@@ -4,7 +4,7 @@ import {
 	setErrorOffActionCreator,
 	setErrorOnActionCreator
 } from '../features/characterSlice';
-import { setTotalPagesActionCreator } from '../features/paginationSlice';
+import { setTotalPagesActionCreator, setTotalResultsActionCreator } from '../features/paginationSlice';
 import { loadedOffActionCreator, loadedOnActionCreator } from '../features/uiSlice';
 import { AppDispatch } from '../store';
 
@@ -22,8 +22,8 @@ export const loadCharactersThunk =
 			} = await axios.get(url);
 
 			if (results) {
-				console.log(count);
 				dispatch(setTotalPagesActionCreator(pages));
+				dispatch(setTotalResultsActionCreator(count));
 				dispatch(setErrorOffActionCreator());
 				dispatch(loadCharactersActionCreator(results));
 				dispatch(loadedOffActionCreator());

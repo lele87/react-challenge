@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { setFilterNameActionCreator } from '../../redux/features/characterSlice';
 import { resetCurrentPageActionCreator } from '../../redux/features/paginationSlice';
 import { useAppDispatch } from '../../redux/store/hooks';
+import StyledSearchBar from './StyledSearchBar';
 
 const SearchBar = () => {
 	const dispatch = useAppDispatch();
@@ -18,16 +19,25 @@ const SearchBar = () => {
 	};
 
 	return (
-		<div className="search">
-			<input
-				type="text"
-				placeholder="Search characters by name"
-				className="search__bar"
-				onChange={changeSearchOption}
-				value={searchOption}
-			/>
-			<button onClick={applyFilter}>search</button>
-		</div>
+		<>
+			<StyledSearchBar>
+				<div className="search">
+					<input
+						type="text"
+						placeholder="Search characters by name"
+						className="search__term"
+						onChange={changeSearchOption}
+						value={searchOption}
+					/>
+					<img
+						src="/images/magnifying-glass-solid.svg"
+						alt="search icon"
+						className="search__icon"
+						onClick={applyFilter}
+					/>
+				</div>
+			</StyledSearchBar>
+		</>
 	);
 };
 

@@ -28,6 +28,7 @@ export interface IDetailCharacterProps {
 export interface IPagination {
 	totalPages: number;
 	currentPage: number;
+	totalResults: number;
 }
 
 export interface IButtonProps {

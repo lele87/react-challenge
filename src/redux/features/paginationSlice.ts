@@ -3,7 +3,8 @@ import { IPagination } from '../../types/types';
 
 const initialState: IPagination = {
 	currentPage: +(sessionStorage.getItem('currentPage') ?? 1),
-	totalPages: 0
+	totalPages: 0,
+	totalResults: 0
 };
 
 const paginationSlice = createSlice({
@@ -25,6 +26,10 @@ const paginationSlice = createSlice({
 		resetCurrentPage: pages => ({
 			...pages,
 			currentPage: 1
+		}),
+		setTotalResults: (pages, action: PayloadAction<number>) => ({
+			...pages,
+			totalResults: action.payload
 		})
 	}
 });
@@ -33,7 +38,8 @@ export const {
 	setNextPage: setNextPageActionCreator,
 	setPreviousPage: setPreviousPageActionCreator,
 	setTotalPages: setTotalPagesActionCreator,
-	resetCurrentPage: resetCurrentPageActionCreator
+	resetCurrentPage: resetCurrentPageActionCreator,
+	setTotalResults: setTotalResultsActionCreator
 } = paginationSlice.actions;
 
 export default paginationSlice.reducer;

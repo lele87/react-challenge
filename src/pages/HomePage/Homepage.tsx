@@ -32,7 +32,7 @@ const HomePage = () => {
 					<SortCharacters charactersList={characterInfo} />
 					<SearchBar />
 					{error ? (
-						<p>No characters found</p>
+						<p className="characters__error--text">No characters found</p>
 					) : (
 						<>
 							<CharactersList charactersList={characterInfo} query={query} />
