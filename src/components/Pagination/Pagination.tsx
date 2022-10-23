@@ -21,7 +21,7 @@ const Pagination = () => {
 					Previous
 				</button>
 				<span>
-					{currentPage} / {totalPages}
+					{currentPage} - {totalPages}
 				</span>
 				<button disabled={currentPage === totalPages} onClick={goToNextPage} className="pagination__button">
 					Next

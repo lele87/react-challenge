@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledPagination = styled.div`
 	display: block;
-	padding-top: 20px;
+	margin-bottom: 20px;
 
 	.pagination {
 		display: flex;
@@ -13,7 +13,7 @@ const StyledPagination = styled.div`
 			background-color: #000;
 			border-radius: 10px;
 			border: none;
-			color: var(--color);
+			color: var(--background-color);
 			font-size: 24px;
 			width: 120px;
 			height: 40px;
@@ -21,7 +21,7 @@ const StyledPagination = styled.div`
 
 			:disabled {
 				pointer-events: none;
-				background-color: var(--color);
+				background-color: var(--background-color);
 				border: none;
 			}
 		}
