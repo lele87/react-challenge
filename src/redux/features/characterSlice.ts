@@ -3,8 +3,8 @@ import { ICharacter, ICharacterState } from '../../types/types';
 
 const initialState: ICharacterState = {
 	characterInfo: [],
-	filterStatus: '',
-	filterName: '',
+	filterStatus: sessionStorage.getItem('filterStatus') ?? '',
+	filterName: sessionStorage.getItem('filterName') ?? '',
 	error: false
 };
 

@@ -16,11 +16,6 @@ export interface ICharacterState {
 	error: boolean;
 }
 
-export interface ICharactersListProps {
-	charactersList: ICharacter[];
-	query: string;
-}
-
 export interface IDetailCharacterProps {
 	character: ICharacter;
 }

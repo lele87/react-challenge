@@ -12,16 +12,18 @@ const StyledPagination = styled.div`
 		&__button {
 			background-color: #000;
 			border-radius: 10px;
-			border: none;
-			color: var(--background-color);
+			border: 2px solid #b2df28;
+			color: var(--color);
 			font-size: 24px;
 			width: 120px;
 			height: 40px;
 			cursor: pointer;
+			font-family: 'Ubuntu';
 
 			:disabled {
 				pointer-events: none;
 				background-color: var(--background-color);
+				color: var(--background-color);
 				border: none;
 			}
 		}

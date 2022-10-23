@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { setFilterNameActionCreator } from '../../redux/features/characterSlice';
+import { setFilterNameActionCreator, setFilterStatusActionCreator } from '../../redux/features/characterSlice';
 import { resetCurrentPageActionCreator } from '../../redux/features/paginationSlice';
 import { useAppDispatch } from '../../redux/store/hooks';
 import StyledSearchBar from './StyledSearchBar';
@@ -14,6 +14,7 @@ const SearchBar = () => {
 
 	const applyFilter = async () => {
 		dispatch(resetCurrentPageActionCreator());
+		dispatch(setFilterStatusActionCreator(''));
 		dispatch(setFilterNameActionCreator(searchOption));
 		setSearchOption('');
 	};

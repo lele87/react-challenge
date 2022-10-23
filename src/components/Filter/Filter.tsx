@@ -20,8 +20,8 @@ const Filter = () => {
 
 	const applyFilter = async () => {
 		dispatch(resetCurrentPageActionCreator());
-		dispatch(setFilterStatusActionCreator(filterStatusOption));
-		dispatch(setFilterNameActionCreator(filterNameOption));
+		await dispatch(setFilterStatusActionCreator(filterStatusOption));
+		await dispatch(setFilterNameActionCreator(filterNameOption));
 		setFilterNameOption('');
 		setFilterStatusOption('');
 	};

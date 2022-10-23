@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 const StyledCharactersList = styled.div`
-	margin-top: 180px;
+	margin-top: 250px;
+
+	@media (max-width: 675px) {
+		margin-top: 185px;
+	}
 
 	.character--container {
 		text-align: center;
@@ -48,6 +52,10 @@ const StyledCharactersList = styled.div`
 	li {
 		list-style: none;
 		flex: 0 0 33%;
+	}
+
+	span {
+		font-weight: bolder;
 	}
 `;
 

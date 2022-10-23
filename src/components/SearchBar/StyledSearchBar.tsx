@@ -27,7 +27,7 @@ const StyledSearchBar = styled.div`
 
 	.search__term {
 		width: 100%;
-		border: 3px solid #00b4cc;
+		border: 3px solid var(--color);
 		border-right: none;
 		padding: 5px;
 		border-radius: 5px 0 0 5px;
@@ -36,12 +36,12 @@ const StyledSearchBar = styled.div`
 	}
 
 	.search__term:focus {
-		color: #00b4cc;
+		color: #000;
 	}
 
 	.search__icon {
 		width: 28px;
-		background-color: #00b4cc;
+		background-color: var(--color);
 		padding: 3.5px;
 		cursor: pointer;
 		border-radius: 0 5px 5px 0;

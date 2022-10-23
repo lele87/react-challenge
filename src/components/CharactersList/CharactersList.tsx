@@ -1,21 +1,24 @@
 import { useAppSelector } from '../../redux/store/hooks';
-import { ICharacter, ICharactersListProps } from '../../types/types';
+import { ICharacter } from '../../types/types';
 import Character from '../Character/Character';
 import StyledCharactersList from './StyledCharactersList';
 
-const CharactersList = ({ charactersList, query }: ICharactersListProps) => {
-	const filteredCharacters = charactersList.filter(
-		character =>
-			character.name.toLowerCase().includes(query.toLowerCase()) ||
-			character.status.toLowerCase().includes(query.toLowerCase())
-	);
-
+const CharactersList = () => {
 	const { totalResults } = useAppSelector(state => state.pagination);
+	const { characterInfo, filterName, filterStatus } = useAppSelector(state => state.characters);
+
+	const filteredCharacters = characterInfo.filter(
+		character =>
+			character.name.toLowerCase().includes(filterName.toLowerCase()) ||
+			character.status.toLowerCase().includes(filterStatus.toLowerCase())
+	);
 
 	return (
 		<StyledCharactersList>
 			<div className="character--container">
-				<p className="character__results">{totalResults} results</p>
+				<p className="character__results">
+					{totalResults} results <span>{filterName}</span> <span>{filterStatus}</span>
+				</p>
 				<ul>
 					{filteredCharacters.map((character: ICharacter) => {
 						return (

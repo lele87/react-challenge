@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import CharactersList from '../../components/CharactersList/CharactersList';
 import Filter from '../../components/Filter/Filter';
 import Footer from '../../components/Footer/Footer';
@@ -14,14 +14,14 @@ const HomePage = () => {
 	const dispatch = useAppDispatch();
 	const { currentPage } = useAppSelector(state => state.pagination);
 	const { characterInfo, filterName, filterStatus, error } = useAppSelector(state => state.characters);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [query, setQuery] = useState('');
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		dispatch(loadCharactersThunk(currentPage, filterName, filterStatus));
+		sessionStorage.setItem('filterName', filterName);
+		sessionStorage.setItem('filterStatus', filterStatus);
 		sessionStorage.setItem('currentPage', `${currentPage}`);
-	}, [dispatch, currentPage, query, filterName, filterStatus]);
+	}, [dispatch, currentPage, filterName, filterStatus]);
 
 	return (
 		<>
@@ -37,7 +37,7 @@ const HomePage = () => {
 						<p className="characters__error--text">No characters found</p>
 					) : (
 						<>
-							<CharactersList charactersList={characterInfo} query={query} />
+							<CharactersList />
 							<Pagination />
 						</>
 					)}

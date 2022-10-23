@@ -22,6 +22,8 @@ const StyledSortCharacters = styled.div`
 			height: 40px;
 			font-size: 18px;
 			cursor: pointer;
+			font-family: 'Ubuntu';
+			box-shadow: var(--box-shadow);
 		}
 	}
 
