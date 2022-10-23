@@ -1,11 +1,23 @@
 import styled from 'styled-components';
 
 const StyledSearchBar = styled.div`
-	width: 30%;
+	width: 40%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	@media (max-width: 929px) {
+		margin-top: 50px;
+	}
+
+	@media (min-width: 391px) and (max-width: 516px) {
+		width: 52%;
+	}
+
+	@media (max-width: 929px) {
+		width: 65%;
+	}
 
 	.search {
 		width: 100%;

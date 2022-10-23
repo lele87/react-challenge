@@ -1,6 +1,6 @@
 import { StyledFooter } from './StyledFooter';
 
-const Footer = ({ error }: any) => {
+const Footer = () => {
 	const footerDate = new Date();
 	const currentYear = footerDate.getFullYear();
 

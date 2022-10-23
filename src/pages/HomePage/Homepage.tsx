@@ -28,8 +28,10 @@ const HomePage = () => {
 			<StyledHomePage>
 				<div className="content">
 					<Header />
-					<Filter />
-					<SortCharacters charactersList={characterInfo} />
+					<div className="filters--container">
+						<SortCharacters charactersList={characterInfo} />
+						<Filter />
+					</div>
 					<SearchBar />
 					{error ? (
 						<p className="characters__error--text">No characters found</p>
