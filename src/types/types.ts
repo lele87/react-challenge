@@ -13,6 +13,7 @@ export interface ICharacterState {
 	characterInfo: ICharacter[];
 	filterStatus: string;
 	filterName: string;
+	error: boolean;
 }
 
 export interface ICharactersListProps {

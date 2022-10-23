@@ -3,23 +3,24 @@ import Character from '../Character/Character';
 import StyledCharactersList from './StyledCharactersList';
 
 const CharactersList = ({ charactersList, query }: ICharactersListProps) => {
+	const filteredCharacters = charactersList.filter(
+		character =>
+			character.name.toLowerCase().includes(query.toLowerCase()) ||
+			character.status.toLowerCase().includes(query.toLowerCase())
+	);
+
 	return (
 		<StyledCharactersList>
 			<div className="character-container">
+				<p>{charactersList.length} results</p>
 				<ul>
-					{charactersList
-						.filter(
-							character =>
-								character.name.toLowerCase().includes(query.toLowerCase()) ||
-								character.status.toLowerCase().includes(query.toLowerCase())
-						)
-						.map((character: ICharacter) => {
-							return (
-								<li key={character.id}>
-									<Character character={character} />
-								</li>
-							);
-						})}
+					{filteredCharacters.map((character: ICharacter) => {
+						return (
+							<li key={character.id}>
+								<Character character={character} />
+							</li>
+						);
+					})}
 				</ul>
 			</div>
 		</StyledCharactersList>

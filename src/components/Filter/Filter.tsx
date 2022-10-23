@@ -27,11 +27,11 @@ const Filter = () => {
 	};
 
 	const clearFilters = () => {
+		dispatch(setFilterStatusActionCreator(''));
+		dispatch(setFilterNameActionCreator(''));
 		dispatch(resetCurrentPageActionCreator());
 		setFilterNameOption('');
 		setFilterStatusOption('');
-		dispatch(setFilterStatusActionCreator(filterStatusOption));
-		dispatch(setFilterNameActionCreator(filterNameOption));
 	};
 
 	return (
