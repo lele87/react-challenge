@@ -17,7 +17,7 @@ const SortCharacters = ({ charactersList }: any) => {
 	return (
 		<>
 			<StyledSortCharacters className="dropdown--container">
-				<div className="dropdown">
+				<div className="dropdown" data-testid="dropdown-navigation">
 					<button className="dropdown__button">Sort by Name</button>
 					<div className="dropdown--content" onClick={e => handleSortName(e)}>
 						<button value="ascending">A - Z</button>
