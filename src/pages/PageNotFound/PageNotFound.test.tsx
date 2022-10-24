@@ -2,9 +2,8 @@ import store from '../../redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { render, screen } from '@testing-library/react';
-import DetailPage from './DetailPage';
-import { mockCharacters } from '../../mocks/mockCharacters';
 import userEvent from '@testing-library/user-event';
+import PageNotFound from './PageNotFound';
 
 const mockedUsedNavigate = jest.fn();
 
@@ -13,22 +12,18 @@ jest.mock('react-router-dom', () => ({
 	useNavigate: () => mockedUsedNavigate
 }));
 
-describe('Given a DetailsPage', () => {
+describe('Given a Page not found', () => {
 	describe("When it's invoked", () => {
-		test('Then it should render a Header, DetailCharacter, Button and Footer components', () => {
+		test('Then it should render a Header, Footer components and Button components', () => {
 			render(
 				<BrowserRouter>
 					<Provider store={store}>
-						<DetailPage character={mockCharacters[0]} />
+						<PageNotFound />
 					</Provider>
 				</BrowserRouter>
 			);
 
 			const expectedHeaderImage = screen.getByAltText('Rick and Morty logo');
-
-			const expectedDetailCharacterHeadings = screen.getAllByRole('heading');
-			const expectedNumberHeadings = 5;
-			const expectedImage = screen.getByAltText('Rick from Rick and Morty Show');
 
 			const expectedButton = screen.getByRole('button', { name: 'Home' });
 
@@ -36,18 +31,17 @@ describe('Given a DetailsPage', () => {
 			const expectedFooterParagraph = screen.getByText(expectedFooterParagraphText);
 
 			expect(expectedHeaderImage).toBeInTheDocument();
-			expect(expectedImage).toBeInTheDocument();
-			expect(expectedDetailCharacterHeadings).toHaveLength(expectedNumberHeadings);
 			expect(expectedButton).toBeInTheDocument();
 			expect(expectedFooterParagraph).toBeInTheDocument();
 		});
 	});
+
 	describe('When the user clicks on the Home button', () => {
 		test('Then it should navigate to Homepage', () => {
 			render(
 				<BrowserRouter>
 					<Provider store={store}>
-						<DetailPage character={mockCharacters[0]} />
+						<PageNotFound />
 					</Provider>
 				</BrowserRouter>
 			);
@@ -55,7 +49,7 @@ describe('Given a DetailsPage', () => {
 			const homeButton = screen.getByRole('button', { name: 'Home' });
 			userEvent.click(homeButton);
 
-			expect(mockedUsedNavigate).toHaveBeenCalledWith('/');
+			expect(mockedUsedNavigate).toHaveBeenCalledWith('/home');
 		});
 	});
 });
