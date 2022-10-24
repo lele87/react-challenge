@@ -37,7 +37,11 @@ const HomePage = () => {
 						<p className="characters__error--text">No characters found</p>
 					) : (
 						<>
-							<CharactersList />
+							<CharactersList
+								characterInfo={characterInfo}
+								filterName={filterName}
+								filterStatus={filterStatus}
+							/>
 							<Pagination />
 						</>
 					)}

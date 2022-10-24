@@ -16,6 +16,12 @@ export interface ICharacterState {
 	error: boolean;
 }
 
+export interface ICharactersListProps {
+	characterInfo: ICharacter[];
+	filterName: string;
+	filterStatus: string;
+}
+
 export interface IDetailCharacterProps {
 	character: ICharacter;
 }
