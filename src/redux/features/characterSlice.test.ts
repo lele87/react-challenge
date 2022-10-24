@@ -2,6 +2,8 @@ import { mockCharacters } from '../../mocks/mockCharacters';
 import { ICharacterState } from '../../types/types';
 import characterSlice, {
 	loadCharactersActionCreator,
+	setErrorOffActionCreator,
+	setErrorOnActionCreator,
 	setFilterNameActionCreator,
 	setFilterStatusActionCreator
 } from './characterSlice';
@@ -60,7 +62,7 @@ describe('Given a set filter name Reducer', () => {
 });
 
 describe('Given a set filter status Reducer', () => {
-	describe('When it receives an initial state with an array of 2 characters and a filter status action', () => {
+	describe('When it receives an initial state with an array of 2 characters and a filter name action', () => {
 		test('Then it should return a new character state with the array with the characters', () => {
 			const initialState = {
 				characterInfo: mockCharacters,
@@ -79,6 +81,58 @@ describe('Given a set filter status Reducer', () => {
 			};
 
 			const characterStatus = characterSlice(initialState, filterCharacterByStatusAction);
+
+			expect(characterStatus).toEqual(expectedNewState);
+		});
+	});
+});
+
+describe('Given a set error on Reducer', () => {
+	describe('When it receives an initial state with an array of 2 characters and an error on action', () => {
+		test('Then it should return a new character state with the error true', () => {
+			const initialState = {
+				characterInfo: mockCharacters,
+				filterName: '',
+				filterStatus: '',
+				error: false
+			};
+
+			const setErrorOnAction = setErrorOnActionCreator();
+
+			const expectedNewState = {
+				characterInfo: mockCharacters,
+				filterName: '',
+				filterStatus: '',
+				error: true
+			};
+
+			const characterStatus = characterSlice(initialState, setErrorOnAction);
+
+			expect(characterStatus).toEqual(expectedNewState);
+		});
+	});
+});
+
+describe('Given a set error off Reducer', () => {
+	describe('When it receives an initial state with an array of 2 characters and an error off action', () => {
+		test('Then it should return a new character state with the error false', () => {
+			const initialState = {
+				characterInfo: mockCharacters,
+				filterName: '',
+				filterStatus: '',
+				error: true
+			};
+
+			const setErrorOffAction = setErrorOffActionCreator();
+
+			const expectedNewState = {
+				characterInfo: mockCharacters,
+				filterName: '',
+				filterStatus: '',
+				error: false
+			};
+
+			const characterStatus = characterSlice(initialState, setErrorOffAction);
 
 			expect(characterStatus).toEqual(expectedNewState);
 		});
