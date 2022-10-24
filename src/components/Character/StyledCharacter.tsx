@@ -8,7 +8,7 @@ const StyledCharacter = styled.div`
 		background-color: var(--card-background-color);
 		border-radius: 20px;
 		height: 505px;
-		margin: 0 3px 120px 3px;
+		margin: 0 3px 80px 3px;
 		padding: 8px;
 
 		h2 {

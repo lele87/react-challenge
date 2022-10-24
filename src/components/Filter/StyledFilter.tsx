@@ -43,7 +43,7 @@ const StyledFilter = styled.div`
 
 	.select {
 		width: 100%;
-
+		height: 40px;
 		font-size: 16px;
 		cursor: pointer;
 		display: flex;

@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 const StyledSortCharacters = styled.div`
 	display: flex;
-	justify-content: center;
-	margin: 30px 0 0 0;
+	justify-content: space-between;
+	margin: 20px 0 0 0;
+
+	@media (max-width: 929px) {
+		justify-content: center;
+	}
 
 	.dropdown {
-		position: relative;
+		position: absolute;
 		display: inline-block;
 
 		&__button {
@@ -15,9 +19,11 @@ const StyledSortCharacters = styled.div`
 			border: none;
 			font-weight: bolder;
 			border-radius: 5px;
-			padding: 12px;
-			font-size: 16px;
+			height: 40px;
+			font-size: 18px;
 			cursor: pointer;
+			font-family: 'Ubuntu';
+			box-shadow: var(--box-shadow);
 		}
 	}
 

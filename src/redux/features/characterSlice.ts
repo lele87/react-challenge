@@ -3,8 +3,9 @@ import { ICharacter, ICharacterState } from '../../types/types';
 
 const initialState: ICharacterState = {
 	characterInfo: [],
-	filterStatus: '',
-	filterName: ''
+	filterStatus: sessionStorage.getItem('filterStatus') ?? '',
+	filterName: sessionStorage.getItem('filterName') ?? '',
+	error: false
 };
 
 const characterSlice = createSlice({
@@ -30,6 +31,14 @@ const characterSlice = createSlice({
 		setFilterStatus: (characters, action: PayloadAction<string>) => ({
 			...characters,
 			filterStatus: action.payload
+		}),
+		setErrorOn: characters => ({
+			...characters,
+			error: true
+		}),
+		setErrorOff: characters => ({
+			...characters,
+			error: false
 		})
 	}
 });
@@ -39,7 +48,9 @@ export const {
 	sortCharactersByNameAscending: sortCharactersByNameAscendingActionCreator,
 	sortCharactersByNameDescending: sortCharactersByNameDescendingActionCreator,
 	setFilterName: setFilterNameActionCreator,
-	setFilterStatus: setFilterStatusActionCreator
+	setFilterStatus: setFilterStatusActionCreator,
+	setErrorOn: setErrorOnActionCreator,
+	setErrorOff: setErrorOffActionCreator
 } = characterSlice.actions;
 
 export default characterSlice.reducer;

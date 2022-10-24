@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledPagination = styled.div`
 	display: block;
-	padding-top: 20px;
+	margin-bottom: 20px;
 
 	.pagination {
 		display: flex;
@@ -12,16 +12,18 @@ const StyledPagination = styled.div`
 		&__button {
 			background-color: #000;
 			border-radius: 10px;
-			border: none;
+			border: 2px solid #b2df28;
 			color: var(--color);
 			font-size: 24px;
 			width: 120px;
 			height: 40px;
 			cursor: pointer;
+			font-family: 'Ubuntu';
 
 			:disabled {
 				pointer-events: none;
-				background-color: var(--color);
+				background-color: var(--background-color);
+				color: var(--background-color);
 				border: none;
 			}
 		}

@@ -13,11 +13,7 @@ export interface ICharacterState {
 	characterInfo: ICharacter[];
 	filterStatus: string;
 	filterName: string;
-}
-
-export interface ICharactersListProps {
-	charactersList: ICharacter[];
-	query: string;
+	error: boolean;
 }
 
 export interface IDetailCharacterProps {
@@ -27,6 +23,7 @@ export interface IDetailCharacterProps {
 export interface IPagination {
 	totalPages: number;
 	currentPage: number;
+	totalResults: number;
 }
 
 export interface IButtonProps {

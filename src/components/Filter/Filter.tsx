@@ -20,18 +20,18 @@ const Filter = () => {
 
 	const applyFilter = async () => {
 		dispatch(resetCurrentPageActionCreator());
-		dispatch(setFilterStatusActionCreator(filterStatusOption));
-		dispatch(setFilterNameActionCreator(filterNameOption));
+		await dispatch(setFilterStatusActionCreator(filterStatusOption));
+		await dispatch(setFilterNameActionCreator(filterNameOption));
 		setFilterNameOption('');
 		setFilterStatusOption('');
 	};
 
 	const clearFilters = () => {
+		dispatch(setFilterStatusActionCreator(''));
+		dispatch(setFilterNameActionCreator(''));
 		dispatch(resetCurrentPageActionCreator());
 		setFilterNameOption('');
 		setFilterStatusOption('');
-		dispatch(setFilterStatusActionCreator(filterStatusOption));
-		dispatch(setFilterNameActionCreator(filterNameOption));
 	};
 
 	return (
