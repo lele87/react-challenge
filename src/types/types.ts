@@ -16,6 +16,12 @@ export interface ICharacterState {
 	error: boolean;
 }
 
+export interface ICharactersListProps {
+	characterInfo: ICharacter[];
+	filterName: string;
+	filterStatus: string;
+}
+
 export interface IDetailCharacterProps {
 	character: ICharacter;
 }
@@ -30,4 +36,18 @@ export interface IButtonProps {
 	onClick?: React.MouseEventHandler;
 	text: string;
 	className: string;
+}
+
+export interface ICharactersResponseApi {
+	data: {
+		info: {
+			pages: number;
+			count: number;
+		};
+		results: [];
+	};
+}
+
+export interface ICharacterResponseApi {
+	data: ICharacter;
 }

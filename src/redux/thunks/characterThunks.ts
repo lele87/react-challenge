@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ICharactersResponseApi } from '../../types/types';
 import {
 	loadCharactersActionCreator,
 	setErrorOffActionCreator,
@@ -19,7 +20,7 @@ export const loadCharactersThunk =
 					info: { pages, count },
 					results
 				}
-			} = await axios.get(url);
+			}: ICharactersResponseApi = await axios.get(url);
 
 			if (results) {
 				dispatch(setTotalPagesActionCreator(pages));

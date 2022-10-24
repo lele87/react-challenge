@@ -1,14 +1,13 @@
 import { useAppSelector } from '../../redux/store/hooks';
-import { ICharacter } from '../../types/types';
+import { ICharacter, ICharactersListProps } from '../../types/types';
 import Character from '../Character/Character';
 import StyledCharactersList from './StyledCharactersList';
 
-const CharactersList = () => {
+const CharactersList = ({ characterInfo, filterName, filterStatus }: ICharactersListProps) => {
 	const { totalResults } = useAppSelector(state => state.pagination);
-	const { characterInfo, filterName, filterStatus } = useAppSelector(state => state.characters);
 
 	const filteredCharacters = characterInfo.filter(
-		character =>
+		(character: { name: string; status: string }) =>
 			character.name.toLowerCase().includes(filterName.toLowerCase()) ||
 			character.status.toLowerCase().includes(filterStatus.toLowerCase())
 	);

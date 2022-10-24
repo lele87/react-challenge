@@ -45,6 +45,7 @@ const Filter = () => {
 							value={filterStatusOption}
 							placeholder="Search by status"
 							id="search by status"
+							data-testid="select"
 						>
 							<option disabled value="">
 								Filter by Status
@@ -59,6 +60,7 @@ const Filter = () => {
 							value={filterNameOption}
 							placeholder="Search by name"
 							id="filter"
+							data-testid="select"
 						>
 							<option disabled value="">
 								Filter by Name
