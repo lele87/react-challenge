@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ICharacterResponseApi } from '../../types/types';
 import { loadSingleCharacterActionCreator } from '../features/detailCharacterSlice';
 import { loadedOnActionCreator, loadedOffActionCreator } from '../features/uiSlice';
 import { AppDispatch } from '../store';
@@ -8,7 +9,7 @@ export const loadSingleCharacterThunk = (id: string) => async (dispatch: AppDisp
 
 	try {
 		dispatch(loadedOnActionCreator());
-		const { data } = await axios.get(url);
+		const { data }: ICharacterResponseApi = await axios.get(url);
 
 		if (data) {
 			dispatch(loadSingleCharacterActionCreator(data));

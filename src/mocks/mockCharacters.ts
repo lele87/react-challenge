@@ -10,6 +10,7 @@ export const mockCharacters = [
 			name: 'Earth'
 		}
 	},
+
 	{
 		name: 'Morty',
 		id: '2',
@@ -19,6 +20,9 @@ export const mockCharacters = [
 		gender: 'Male',
 		origin: {
 			name: 'Earth'
-		}
+		},
+		filterStatus: '',
+		filterName: '',
+		error: false
 	}
 ];

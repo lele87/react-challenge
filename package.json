@@ -29,6 +29,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!technical-challenge)/\" --env=jsdom",
+		"test-coverage": "npm run test -- --coverage --watchAll=false",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
@@ -59,5 +60,11 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.7.1"
+	},
+	"jest": {
+		"collectCoverageFrom": [
+			"!src/index.tsx",
+			"!src/reportWebVitals.ts"
+		]
 	}
 }

@@ -37,3 +37,17 @@ export interface IButtonProps {
 	text: string;
 	className: string;
 }
+
+export interface ICharactersResponseApi {
+	data: {
+		info: {
+			pages: number;
+			count: number;
+		};
+		results: [];
+	};
+}
+
+export interface ICharacterResponseApi {
+	data: ICharacter;
+}
