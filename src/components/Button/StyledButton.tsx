@@ -7,7 +7,6 @@ const StyledButton = styled.button`
 	height: 40px;
 	margin-top: 10px;
 	cursor: pointer;
-	font-family: 'Ubuntu';
 `;
 
 export default StyledButton;

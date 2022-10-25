@@ -7,8 +7,12 @@ const StyledSearchBar = styled.div`
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	@media (max-width: 929px) {
-		margin-top: 50px;
+	@media (max-width: 675px) {
+		margin-top: 110px;
+	}
+
+	@media (min-width: 676px) and (max-width: 929px) {
+		margin-top: 100px;
 	}
 
 	@media (min-width: 391px) and (max-width: 516px) {
@@ -27,6 +31,7 @@ const StyledSearchBar = styled.div`
 
 	.search__term {
 		width: 100%;
+		height: 40px;
 		border: 3px solid var(--color);
 		border-right: none;
 		padding: 5px;

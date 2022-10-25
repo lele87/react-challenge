@@ -4,7 +4,6 @@ const StyledPageNotFound = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: 'Ubuntu';
 
 	.message {
 		font-size: 25px;

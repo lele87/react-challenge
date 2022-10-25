@@ -12,6 +12,7 @@ const StyledFilter = styled.div`
 		@media (max-width: 675px) {
 			display: flex;
 			flex-direction: column;
+			gap: 25px;
 		}
 	}
 
@@ -33,6 +34,7 @@ const StyledFilter = styled.div`
 
 		@media (max-width: 420px) {
 			width: 150px;
+			height: 50px;
 		}
 	}
 
@@ -59,7 +61,7 @@ const StyledFilter = styled.div`
 
 		& button {
 			width: 100px;
-			height: 100%;
+			height: 40px;
 			font-size: 15px;
 			padding: 2px 2px;
 			margin-top: 0px;
@@ -69,6 +71,10 @@ const StyledFilter = styled.div`
 			border: 1px solid #000;
 			cursor: pointer;
 			box-shadow: var(--box-shadow);
+
+			@media (max-width: 420px) {
+				height: 45px;
+			}
 		}
 	}
 `;

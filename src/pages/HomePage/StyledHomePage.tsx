@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const StyledHomePage = styled.div`
 	display: flex;
 	flex-direction: column;
-	font-family: 'Ubuntu';
 
 	.content {
 		min-height: calc(100vh - 80px);

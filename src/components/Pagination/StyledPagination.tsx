@@ -18,7 +18,6 @@ const StyledPagination = styled.div`
 			width: 120px;
 			height: 40px;
 			cursor: pointer;
-			font-family: 'Ubuntu';
 
 			:disabled {
 				pointer-events: none;
