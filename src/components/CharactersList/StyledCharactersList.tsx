@@ -4,7 +4,7 @@ const StyledCharactersList = styled.div`
 	margin-top: 250px;
 
 	@media (max-width: 675px) {
-		margin-top: 185px;
+		margin-top: 205px;
 	}
 
 	.character--container {

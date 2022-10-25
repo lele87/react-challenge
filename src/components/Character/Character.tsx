@@ -23,7 +23,9 @@ const Character = ({ character: { id, name, image, species, status } }: { charac
 							alt={`${name} from Rick and Morty Show`}
 						></img>
 					</div>
-					<h2>{name}</h2>
+					<div className="character__name">
+						<h2>{name}</h2>
+					</div>
 					<span>
 						{species} | {status}
 					</span>

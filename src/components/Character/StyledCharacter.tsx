@@ -7,7 +7,7 @@ const StyledCharacter = styled.div`
 		align-items: center;
 		background-color: var(--card-background-color);
 		border-radius: 20px;
-		height: 505px;
+		height: 510px;
 		margin: 0 3px 80px 3px;
 		padding: 8px;
 
@@ -27,6 +27,10 @@ const StyledCharacter = styled.div`
 			width: 300px;
 			height: 300px;
 			margin-top: -70px;
+		}
+
+		&__name {
+			margin: 0 5px;
 		}
 
 		&__image {
