@@ -1,46 +1,141 @@
-# Getting Started with Create React App
+<br>
+<h1 align="center">React FE Challenge</h1>
+<div align="center">
+<img src="https://w0.peakpx.com/wallpaper/940/144/HD-wallpaper-rick-and-morty-logo-ultra-cartoons-others-logo-rickandmorty.jpg" alt="logo of Rick & Morty" />
+</div>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## ▶️ Production Deployment Link
 
-### `npm start`
+-   [Link](https://emanuele-panesi-react-challenge.netlify.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Features
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✔️ Display a paginated list of 826 characters from The Rick & Morty API<br>
+✔️ Name and status related filter and sorting by Alphabetical order<br>
+✔️ Name search bar<br>
+✔️ Responsive UI layout<br>
+✔️ Use of React Hooks, Redux, React Router and Session Storage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 👨🏻‍💻 About
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The App redirects you to the homepage, in which you can choose to see all characters, filter them by properties or read more about their details in a dedicated page. The app is responsive and it supports web and mobile versions.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+-   State: the state of the application is managed with Redux, to facilitate communication and sharing of data across components and keep changes more traceables. There is a central store with four slices (character, detailCharacter, pagination, ui) with its corresponding reducers and action creators that holds the entire state of the application.
+    The asyncronous actions are dispatched through the Redux thunks functions, depending on certain conditions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    -   Routing: client side routing enabled by React Router, a redirects file is created to allow to serve all the pages from the same location (index.html).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Session Storage: it's used to persist the state in case of refreshing page. The currentPage, filterName and filterStatus initial states are saved in Session Storage.
+
+-   Axios: library used to make requests and return data from the API
+
+-   Styled-Components: library used to manage the app' styles.
+
+<br>
+
+<h3 align="center">Components</h3>
+
+-   Pagination: it renders two buttons, unless the currentPage value is 1. The currentPage initial state is store through Session Storage to persist the state in case of refreshing page.
+
+-   Filter: it renders two select menus and two buttons. Every menu has three options, there's a local state to store the selected options that will update the filter name and status states, once clicked on the filter button. The clear filters button restores the initial state. The filter name and status initial states are stored through Session Storage to persist the state in case of refreshing page.
+
+-   Search bar: it renders an input field and an image. There's a local state to store the text typed that will update the filter name state state once clicked on the image.
+
+-   Sort Characters: it renders a dropdown button and two more buttons as content. Clicking on the content, the sort action is dispatched and the characters list is sorted depending on the name's initial letter. It communicate with is parent component (Homepage) through character list props.
+
+-   Character: it renders the character card, it communicate with is parent component (CharactersList) through character props.
+
+-   CharactersList: it renders the characters list data, it creates a new array with the quantity of characters depending on the results from the API. It communicate with is parent component (Homepage) through character info, filter name and filter status props.
+
+-   Detail Character: it renders the detail character card, it communicate with is parent component (Detail Page) through character props.
+
+<br>
+
+<h3 align="center">Pages</h3>
+
+-   Homepage: it renders Header, Sort Characters button dropdown, Filter, Search bar, Characters list, Pagination and Footer.
+    The useEffect hook get the Characters list data fetching and and get the saved the currentPage, filter name and filter status values every time they change (saved in Session Storage).
+
+-   Detail Page: it renders Header, Detail Character, Navigate Home Button and Footer.
+    The useEffect hook that get the Detail Character data fetching every time its ID's value change.
+    The useParams hook returns the Detail Character's ID from the URL that was matched by the Route path in the App.
+
+-   Page not Found: it renders a Header, text, Button and a Footer. It's visible if the path doesn't exist.
+
+<br>
+
+---
+
+<br>
+
+## 🚀 Technologies
+
+<br>
+
+-   [React](https://reactjs.org/)
+-   [Redux Toolkit](https://redux-toolkit.js.org/)
+-   [React Router](https://reactrouter.com/en/main)
+-   [Typescript](https://www.typescriptlang.org/)
+-   [Webpack](https://webpack.js.org/)
+-   [Styled-Components](https://styled-components.com/)
+-   [Axios](https://axios-http.com/)
+-   [React-Testing-Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+<br>
+
+---
+
+<br>
+
+## 🖥 Run Locally
+
+<br>
+
+-   Clone the project
+
+```
+git clone https://github.com/lele87/react-challenge.git
+```
+
+<br>
+
+-   Install dependencies
+
+```
+npm install
+```
+
+<br>
+
+-   Create a .env file
+
+-   Paste the following key to the .env file
+
+```
+REACT_APP_API_URL=https://rickandmortyapi.com/api/character/
+```
+
+---

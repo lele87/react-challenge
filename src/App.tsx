@@ -7,7 +7,6 @@ import { useAppSelector } from './redux/store/hooks';
 
 function App() {
 	const { loaded } = useAppSelector(state => state.ui);
-	const { character } = useAppSelector(state => state);
 
 	return (
 		<>
@@ -15,7 +14,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Navigate to="/home" />} />
 				<Route path="/home" element={<HomePage />} />
-				<Route path="/details/:idCharacter" element={<DetailPage character={character} />} />
+				<Route path="/details/:idCharacter" element={<DetailPage />} />
 				<Route path="/*" element={<PageNotFound />} />
 			</Routes>
 		</>

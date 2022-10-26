@@ -3,9 +3,10 @@ import {
 	sortCharactersByNameDescendingActionCreator
 } from '../../redux/features/characterSlice';
 import { useAppDispatch } from '../../redux/store/hooks';
+import { ISortCharactersList } from '../../types/types';
 import StyledSortCharacters from './StyledSortCharacters';
 
-const SortCharacters = ({ charactersList }: any) => {
+const SortCharacters = ({ charactersList }: ISortCharactersList) => {
 	const dispatch = useAppDispatch();
 
 	const handleSortName = async (event: any) => {
