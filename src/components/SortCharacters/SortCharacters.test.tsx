@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { mockCharacters } from '../../mocks/mockCharacters';
 import store from '../../redux/store';
 import SortCharacters from './SortCharacters';
 
@@ -17,7 +18,7 @@ describe('Given a Sort Characters component', () => {
 			render(
 				<BrowserRouter>
 					<Provider store={store}>
-						<SortCharacters />
+						<SortCharacters charactersList={mockCharacters} />
 					</Provider>
 				</BrowserRouter>
 			);

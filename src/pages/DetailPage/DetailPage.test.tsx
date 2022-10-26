@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { render, screen } from '@testing-library/react';
 import DetailPage from './DetailPage';
-import { mockCharacters } from '../../mocks/mockCharacters';
 import userEvent from '@testing-library/user-event';
 
 const mockedUsedNavigate = jest.fn();
@@ -19,7 +18,7 @@ describe('Given a DetailsPage', () => {
 			render(
 				<BrowserRouter>
 					<Provider store={store}>
-						<DetailPage character={mockCharacters[0]} />
+						<DetailPage />
 					</Provider>
 				</BrowserRouter>
 			);
@@ -47,7 +46,7 @@ describe('Given a DetailsPage', () => {
 			render(
 				<BrowserRouter>
 					<Provider store={store}>
-						<DetailPage character={mockCharacters[0]} />
+						<DetailPage />
 					</Provider>
 				</BrowserRouter>
 			);

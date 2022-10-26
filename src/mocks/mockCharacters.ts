@@ -20,9 +20,6 @@ export const mockCharacters = [
 		gender: 'Male',
 		origin: {
 			name: 'Earth'
-		},
-		filterStatus: '',
-		filterName: '',
-		error: false
+		}
 	}
 ];

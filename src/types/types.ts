@@ -22,6 +22,10 @@ export interface ICharactersListProps {
 	filterStatus: string;
 }
 
+export interface ISortCharactersList {
+	charactersList: ICharacter[];
+}
+
 export interface IDetailCharacterProps {
 	character: ICharacter;
 }

@@ -4,13 +4,13 @@ import Button from '../../components/Button/Button';
 import DetailCharacter from '../../components/DetailCharacter/DetailCharacter';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import { useAppDispatch } from '../../redux/store/hooks';
+import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
 import { loadSingleCharacterThunk } from '../../redux/thunks/detailCharacterThunks';
 import StyledDetailPage from './StyledDetaiPage';
-import { IDetailCharacterProps } from '../../types/types';
 
-const DetailPage = ({ character }: IDetailCharacterProps) => {
+const DetailPage = () => {
 	const { idCharacter } = useParams();
+	const { character } = useAppSelector(state => state);
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
 
