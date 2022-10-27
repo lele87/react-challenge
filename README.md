@@ -44,7 +44,7 @@ The App redirects you to the homepage, in which you can choose to see all charac
 <br>
 
 -   State: the state of the application is managed with Redux, to facilitate communication and sharing of data across components and keep changes more traceables. There is a central store with four slices (character, detailCharacter, pagination, ui) with its corresponding reducers and action creators that holds the entire state of the application.
-    The asyncronous actions are dispatched through the Redux thunks functions, depending on certain conditions.
+    The asynchronous actions are dispatched through the Redux thunks functions, depending on certain conditions.
 
     -   Routing: client side routing enabled by React Router, a redirects file is created to allow to serve all the pages from the same location (index.html).
 
@@ -52,7 +52,7 @@ The App redirects you to the homepage, in which you can choose to see all charac
 
 -   Axios: library used to make requests and return data from the API
 
--   Styled-Components: library used to manage the app' styles.
+-   Styled-Components: library used to manage the app's styles.
 
 <br>
 
